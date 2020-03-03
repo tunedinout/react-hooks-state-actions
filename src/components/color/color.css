@@ -1,0 +1,9 @@
+  .color-list{
+    display: block;
+    text-align: left;
+    width: 500px;
+  }
+  .color-item{
+    padding: 16px 32px;
+    border-left: 10px solid black;
+  }

@@ -1,0 +1,7 @@
+{
+    "files.watcherExclude": {
+        "**/public": true,
+        "**/build": true,
+        "**/node_modules": true,
+    }
+}
