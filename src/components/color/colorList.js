@@ -1,18 +1,20 @@
-import React from 'react';
-import Color from './color';
-import './color.css'
-import useGlobalState from '../../globalState';
+import React from "react";
+import Color from "./color";
+import { connect } from "../../connect";
+import "./color.css";
 
 function ColorList(props) {
-    const [state] = useGlobalState();
+  const { colors } = props;
 
-    return (
-        <div className="color-list">
-            {
-                state.colors.map((color) => <Color value={color} />)
-            }
-        </div>
-
-    );
+  return (
+    <div className="color-list">
+      {colors.map(color => (
+        <Color value={color} />
+      ))}
+    </div>
+  );
 }
-export default ColorList;
+const mapStateToProps = state => ({
+  colors: state.colors
+});
+export default connect(mapStateToProps)(ColorList);
